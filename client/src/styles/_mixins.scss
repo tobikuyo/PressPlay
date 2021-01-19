@@ -1,0 +1,33 @@
+@mixin auth-background {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("../images/auth-background.jpg");
+}
+
+@mixin form-input {
+    font-size: 1.4rem;
+    padding: 1.5rem;
+}
+
+@mixin form-btn {
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@mixin form-element($color) {
+    height: 50px;
+    width: 90%;
+    outline-width: 0;
+    border: none;
+    border-radius: 5px;
+    background-color: $color;
+    color: #fff;
+}
+
+@mixin flex-center($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
