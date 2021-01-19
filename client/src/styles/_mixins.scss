@@ -15,14 +15,17 @@
     cursor: pointer;
 }
 
-@mixin form-element($color) {
-    height: 50px;
-    width: 90%;
+@mixin form-element($color: $color-input) {
     outline-width: 0;
     border: none;
     border-radius: 5px;
     background-color: $color;
     color: #fff;
+}
+
+@mixin form-element-constraints {
+    height: 50px;
+    width: 90%;
 }
 
 @mixin flex-center($direction: row) {

@@ -25,10 +25,12 @@
     &--input {
         @include form-input;
         @include form-element($color-input);
+        @include form-element-constraints;
     }
 
     &--btn {
         @include form-btn;
         @include form-element($color-primary);
+        @include form-element-constraints;
     }
 }
