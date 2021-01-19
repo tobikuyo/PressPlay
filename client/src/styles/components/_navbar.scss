@@ -1,0 +1,33 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        font-family: "Oswald", sans-serif;
+    }
+
+    &__input {
+        @include form-element;
+        height: 40px;
+        width: 40%;
+        max-width: 350px;
+        padding: 1rem;
+        margin-left: -5%;
+        font-size: 1.45rem;
+        transition: all 0.3s ease-in-out;
+
+        &:focus {
+            width: 50%;
+            max-width: 375px;
+        }
+
+        @media screen and(max-width: 1300px) {
+            margin-left: 0;
+        }
+    }
+
+    .MuiAvatar-root {
+        cursor: pointer;
+    }
+}
