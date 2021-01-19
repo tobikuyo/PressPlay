@@ -1,0 +1,34 @@
+.login {
+    @include flex-center;
+    @include auth-background;
+
+    &__redirect {
+        font-size: 1.5rem;
+        color: #737373;
+    }
+}
+
+.login__form {
+    @include flex-center(column);
+    justify-content: space-evenly;
+    height: 60%;
+    width: 90%;
+    max-width: 450px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 5rem;
+
+    &--heading {
+        font-size: 2.8rem;
+    }
+
+    &--input {
+        @include form-input;
+        @include form-element($color-input);
+    }
+
+    &--btn {
+        @include form-btn;
+        @include form-element($color-primary);
+    }
+}
