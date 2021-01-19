@@ -1,0 +1,28 @@
+.register {
+    @include flex-center;
+    @include auth-background;
+
+    &__redirect {
+        font-size: 1.5rem;
+        color: #737373;
+    }
+}
+
+.register__form {
+    @extend .login__form;
+    height: 70%;
+
+    &--heading {
+        font-size: 2.8rem;
+    }
+
+    &--input {
+        @include form-input;
+        @include form-element($color-input);
+    }
+
+    &--btn {
+        @include form-btn;
+        @include form-element($color-primary);
+    }
+}

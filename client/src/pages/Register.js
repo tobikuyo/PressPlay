@@ -3,11 +3,12 @@ import { Link, useHistory } from "react-router-dom";
 import axiosInstance from "../api/auth";
 
 const initialForm = {
+    name: "",
     email: "",
     password: ""
 };
 
-const Login = () => {
+const Register = () => {
     const [form, setForm] = useState(initialForm);
     const history = useHistory();
 
@@ -19,42 +20,49 @@ const Login = () => {
         event.preventDefault();
 
         try {
-            const { data } = await axiosInstance.post("/login", form);
-            localStorage.setItem("token", data.token);
+            await axiosInstance.post("/register", form);
             setForm(initialForm);
-            history.push("/");
+            history.push("/login", [form]);
         } catch (error) {
-            console.log("LOGIN", error);
+            console.log("REGISTER", error);
         }
     };
 
     return (
-        <div className="login" onSubmit={handleSubmit}>
-            <form className="login__form">
-                <h2 className="login__form--heading">Sign In</h2>
+        <div className="register" onSubmit={handleSubmit}>
+            <form className="register__form">
+                <h2 className="register__form--heading">Sign Up</h2>
+                <input
+                    name="name"
+                    type="text"
+                    value={form.name}
+                    onChange={handleChanges}
+                    placeholder="Name"
+                    className="register__form--input"
+                />
                 <input
                     name="email"
                     type="text"
                     value={form.email}
                     onChange={handleChanges}
                     placeholder="Email"
-                    className="login__form--input"
+                    className="register__form--input"
                 />
                 <input
                     name="password"
                     type="password"
                     value={form.password}
                     onChange={handleChanges}
-                    className="login__form--input"
+                    className="register__form--input"
                     placeholder="Password"
                 />
-                <button className="login__form--btn" type="submit">
-                    Sign In
+                <button className="register__form--btn" type="submit">
+                    Sign Up
                 </button>
-                <p className="login__redirect">
-                    New to PressPlay?{" "}
+                <p className="register__redirect">
+                    Already have an account?{" "}
                     <span>
-                        <Link to="/register">Register</Link>
+                        <Link to="/login">Log In</Link>
                     </span>
                 </p>
             </form>
@@ -62,4 +70,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
