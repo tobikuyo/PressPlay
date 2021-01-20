@@ -1,0 +1,25 @@
+.movielist {
+    padding: 3rem;
+    margin-top: -5rem;
+
+    &__container {
+        padding-top: 2rem;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+
+    &__poster {
+        height: 25rem;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+}
