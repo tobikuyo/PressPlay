@@ -15,7 +15,7 @@
     cursor: pointer;
 }
 
-@mixin form-element($color: $color-input) {
+@mixin form-element($color: $color-grey) {
     outline-width: 0;
     border: none;
     border-radius: 5px;

@@ -24,7 +24,7 @@
 
     &--input {
         @include form-input;
-        @include form-element($color-input);
+        @include form-element($color-grey);
         @include form-element-constraints;
     }
 
