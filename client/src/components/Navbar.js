@@ -1,11 +1,12 @@
 import React from "react";
 import Avatar from "@material-ui/core/Avatar";
+import logo from "../images/logo.png";
 import user from "../images/user-default.png";
 
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <h2 className="navbar__logo">PRESSPLAY</h2>
+            <img className="navbar__logo" src={logo} alt="logo" />
             <input
                 type="text"
                 className="navbar__input"

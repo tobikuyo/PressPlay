@@ -4,7 +4,7 @@
     align-items: center;
 
     &__logo {
-        font-family: "Oswald", sans-serif;
+        width: 15rem;
     }
 
     &__input {
@@ -16,6 +16,7 @@
         margin-left: -5%;
         font-size: 1.45rem;
         transition: all 0.3s ease-in-out;
+        display: none;
 
         &:focus {
             width: 50%;
