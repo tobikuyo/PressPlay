@@ -1,0 +1,38 @@
+.spotlight {
+    padding: 3rem;
+    height: 75vh;
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__container {
+        align-self: center;
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        max-width: 300px;
+        margin-bottom: 4rem;
+    }
+
+    &__btn {
+        @include form-element(rgba(255, 255, 255, 0.05));
+        @include flex-center;
+        height: 60px;
+        width: 45%;
+        font-size: 1.5rem;
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: $color-white;
+            color: $color-grey;
+            cursor: pointer;
+        }
+
+        .MuiSvgIcon-root {
+            font-size: 1.5rem;
+        }
+    }
+}

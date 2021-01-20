@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import Spotlight from "../components/Spotlight";
 
 const Home = () => {
     return (
         <div className="home">
-            <Navbar />
+            <Spotlight />
         </div>
     );
 };
