@@ -17,7 +17,9 @@ const MovieList = ({ type }) => {
 
     const title = () => {
         switch (type) {
-            case "trending" || "popular":
+            case "trending":
+                return type;
+            case "popular":
                 return type;
             case "topRated":
                 return "top rated";
