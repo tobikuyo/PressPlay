@@ -6,7 +6,10 @@ const Home = () => {
     return (
         <div className="home">
             <Spotlight />
-            <MovieList />
+            <MovieList type="trending" />
+            <MovieList type="popular" />
+            <MovieList type="topRated" />
+            <MovieList type="nowPlaying" />
         </div>
     );
 };
