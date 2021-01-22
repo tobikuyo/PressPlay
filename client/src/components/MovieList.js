@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { IMAGE_URL } from "../constants/url";
 import {
     fetchNowPlaying,
@@ -30,12 +31,17 @@ const MovieList = ({ type }) => {
 
     const poster = movie => {
         return (
-            <img
-                className="movielist__poster"
-                src={`${IMAGE_URL}${movie.poster_path}`}
-                alt={movie.title}
+            <Link
+                to={`/movie/${movie.id}`}
+                className="movielist__link"
                 key={movie.id}
-            />
+            >
+                <img
+                    className="movielist__poster"
+                    src={`${IMAGE_URL}${movie.poster_path}`}
+                    alt={movie.title}
+                />
+            </Link>
         );
     };
 

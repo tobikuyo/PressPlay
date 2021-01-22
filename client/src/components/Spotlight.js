@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import AddIcon from "@material-ui/icons/Add";
 
 import Navbar from "./Navbar";
@@ -28,7 +29,9 @@ const Spotlight = () => {
                 >
                     <Navbar />
                     <div className="spotlight__container">
-                        <button className="spotlight__btn">MORE INFO</button>
+                        <Link to={`/movie/${movie.id}`} className="spotlight__btn">
+                            MORE INFO
+                        </Link>
                         <button className="spotlight__btn">
                             WATCHLIST <AddIcon />
                         </button>

@@ -24,6 +24,12 @@
         }
     }
 
+    &__link {
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+
     &__poster {
         height: 25rem;
         cursor: pointer;
