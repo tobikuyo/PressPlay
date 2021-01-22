@@ -3,3 +3,4 @@ export const FETCH_POPULAR = "FETCH_POPULAR";
 export const FETCH_TOP_RATED = "FETCH_TOP_RATED";
 export const FETCH_NOW_PLAYING = "FETCH_NOW_PLAYING";
 export const FETCH_DETAILS = "FETCH_DETAILS";
+export const FETCH_CAST = "FETCH_CAST";
