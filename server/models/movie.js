@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const Actor = require("./actor");
 
 const movieSchema = mongoose.Schema({
     _id: {
@@ -9,9 +10,7 @@ const movieSchema = mongoose.Schema({
     overview: String,
     poster: String,
     backdrop: String,
-    rating: Number,
-    genres: [String],
-    release_date: String
+    cast: [Actor]
 });
 
 module.exports = movieSchema;
