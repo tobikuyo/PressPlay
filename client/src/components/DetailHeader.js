@@ -1,25 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import AddIcon from "@material-ui/icons/Add";
 import { IMAGE_URL } from "../constants/url";
+import { addMovie, removeMovie } from "../redux/actions/profileActions";
 import Navbar from "./Navbar";
-import { addMovie } from "../redux/actions/profileActions";
 
 const DetailHeader = () => {
+    const [added, setAdded] = useState(false);
     const { movie } = useSelector(state => state.detailReducer);
     const { cast } = useSelector(state => state.castReducer);
     const dispatch = useDispatch();
 
+    const newMovie = {
+        ...movie,
+        _id: movie.id,
+        backdrop: movie.backdrop_path,
+        poster: movie.poster_path,
+        cast
+    };
+
     const handleClick = () => {
-        dispatch(
-            addMovie({
-                ...movie,
-                _id: movie.id,
-                backdrop: movie.backdrop_path,
-                poster: movie.poster_path,
-                cast
-            })
-        );
+        if (!added) {
+            dispatch(addMovie(newMovie));
+        } else {
+            dispatch(removeMovie(newMovie));
+        }
+
+        setAdded(!added);
     };
 
     return (
@@ -33,7 +39,7 @@ const DetailHeader = () => {
                 >
                     <Navbar />
                     <button onClick={handleClick} className="spotlight__btn--header">
-                        WATCHLIST <AddIcon />
+                        {!added ? "ADD TO WATCHLIST" : "REMOVE"}
                     </button>
                 </div>
             )}
