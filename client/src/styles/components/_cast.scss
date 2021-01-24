@@ -1,0 +1,41 @@
+.cast {
+    &__title {
+        text-align: center;
+        margin-top: 40px;
+        color: #c0c0c0;
+
+        @media screen and (max-width: 428px) {
+            font-size: 3.5rem;
+        }
+    }
+
+    &__container {
+        display: flex;
+        overflow-x: scroll;
+        padding: 5rem;
+    }
+
+    &__info {
+        padding-right: 5rem;
+    }
+
+    &__name {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 1rem;
+        color: #c0c0c0;
+
+        @media screen and (max-width: 428px) {
+            font-size: 2rem;
+        }
+    }
+
+    .MuiAvatar-root {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    @media screen and (max-width: 428px) {
+        font-size: 62.5%;
+    }
+}

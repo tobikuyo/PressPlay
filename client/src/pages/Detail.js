@@ -19,7 +19,7 @@ const Detail = () => {
         <div className="detail">
             <DetailHeader />
             <DetailContent />
-            {/* <Cast /> */}
+            <Cast />
         </div>
     );
 };
