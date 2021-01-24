@@ -8,9 +8,18 @@
     &__title {
         margin: 40px auto 20px;
         line-height: 1.5;
+
+        @media screen and (max-width: 428px) {
+            font-size: 5rem;
+        }
     }
 
     &__overview {
+        font-size: 1.8rem;
         line-height: 2;
+
+        @media screen and (max-width: 428px) {
+            font-size: 2.2rem;
+        }
     }
 }

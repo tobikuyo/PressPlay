@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import AddIcon from "@material-ui/icons/Add";
 import { IMAGE_URL } from "../constants/url";
 import Navbar from "./Navbar";
 
@@ -16,6 +17,9 @@ const DetailHeader = () => {
                     }}
                 >
                     <Navbar />
+                    <button className="spotlight__btn--header">
+                        WATCHLIST <AddIcon />
+                    </button>
                 </div>
             )}
         </>

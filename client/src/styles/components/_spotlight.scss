@@ -36,6 +36,13 @@
         }
     }
 
+    &__btn--header {
+        @extend .spotlight__btn;
+        width: 40%;
+        max-width: 160px;
+        margin: 0 auto;
+    }
+
     @media screen and (max-width: 1024px) {
         padding-bottom: 15vh;
     }
