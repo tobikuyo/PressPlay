@@ -7,7 +7,7 @@ exports.getAllMovies = (req, res) => {
 
 exports.getMovieDetails = (req, res) => {
     const { id } = req.params;
-    const movies = req.user.movies.filter(movie => movie.movie_id === Number(id));
+    const movies = req.user.movies.filter(movie => movie._id === Number(id));
 
     if (movies.length === 0) {
         return res.status(404).json({ message: "There is no movie with that id" });

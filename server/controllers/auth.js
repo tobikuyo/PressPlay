@@ -24,7 +24,7 @@ exports.loginUser = async (req, res, next) => {
         }
 
         const token = jwt.sign({ id: req.existingUser._id }, process.env.SECRET);
-        res.header("authorization").json({ token });
+        res.header("authorization", token).json({ token });
     } catch (error) {
         next(error);
     }
