@@ -15,21 +15,19 @@ const Cast = () => {
     }, [dispatch, id]);
 
     return (
-        <>
-            <div className="cast">
-                <div className="cast__container">
-                    {cast.map(actor => (
-                        <div className="cast__info" key={actor.id}>
-                            <Avatar
-                                src={`${IMAGE_URL}${actor.profile_path}`}
-                                alt={actor.name}
-                            />
-                            <p className="cast__name">{actor.name}</p>
-                        </div>
-                    ))}
-                </div>
+        <div className="cast">
+            <div className="cast__container">
+                {cast.map(actor => (
+                    <div className="cast__info" key={actor.id}>
+                        <Avatar
+                            src={`${IMAGE_URL}${actor.profile_path}`}
+                            alt={actor.name}
+                        />
+                        <p className="cast__name">{actor.name}</p>
+                    </div>
+                ))}
             </div>
-        </>
+        </div>
     );
 };
 

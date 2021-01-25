@@ -25,10 +25,8 @@ const DetailHeader = () => {
     const handleClick = () => {
         if (!added) {
             dispatch(addMovie(newMovie));
-            alert(`${movie.title} has been added to your watchlist`);
         } else {
             dispatch(removeMovie(newMovie));
-            alert(`${movie.title} has been removed from your watchlist`);
         }
 
         setAdded(!added);

@@ -2,10 +2,7 @@ const mongoose = require("mongoose");
 const Actor = require("./actor");
 
 const movieSchema = mongoose.Schema({
-    _id: {
-        type: Number,
-        unique: true
-    },
+    _id: Number,
     title: String,
     overview: String,
     poster: String,
