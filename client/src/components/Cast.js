@@ -17,7 +17,6 @@ const Cast = () => {
     return (
         <>
             <div className="cast">
-                <h2 className="cast__title">Cast Members</h2>
                 <div className="cast__container">
                     {cast.map(actor => (
                         <div className="cast__info" key={actor.id}>

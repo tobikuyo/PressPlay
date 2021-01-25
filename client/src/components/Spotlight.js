@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import AddIcon from "@material-ui/icons/Add";
 
-import Navbar from "./Navbar";
 import { fetchTrending } from "../redux/actions/movieActions";
 import { IMAGE_URL } from "../constants/url";
+import Navbar from "./Navbar";
 
 const Spotlight = () => {
     const { trending } = useSelector(state => state.movieReducer);
@@ -32,9 +31,6 @@ const Spotlight = () => {
                         <Link to={`/movie/${movie.id}`} className="spotlight__btn">
                             MORE INFO
                         </Link>
-                        <button className="spotlight__btn">
-                            WATCHLIST <AddIcon />
-                        </button>
                     </div>
                 </div>
             )}
