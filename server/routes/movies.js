@@ -5,13 +5,18 @@ const {
     addMovie, 
     getAllMovies, 
     removeMovie, 
-    getMovieDetails 
+    getMovieDetails, 
+    getMovieIds
 } = require("../controllers/movies");
 
 router
     .route("/")
     .get(restrict, findUser, getAllMovies)
     .put(restrict, findUser, addMovie);
+
+router
+    .route("/ids")
+    .get(restrict, findUser, getMovieIds);
     
 router
     .route("/:id")

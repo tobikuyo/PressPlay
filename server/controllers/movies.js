@@ -5,6 +5,12 @@ exports.getAllMovies = (req, res) => {
     });
 };
 
+exports.getMovieIds = (req, res) => {
+    let ids = [];
+    req.user.movies.forEach(movie => ids.push(movie._id));
+    res.status(200).json({ results: ids.length, ids });
+};
+
 exports.getMovieDetails = (req, res) => {
     const { id } = req.params;
     const movies = req.user.movies.filter(movie => movie._id === Number(id));
@@ -16,7 +22,7 @@ exports.getMovieDetails = (req, res) => {
     res.status(200).json({ movie: movies[0] });
 };
 
-exports.addMovie = async (req, res) => {
+exports.addMovie = (req, res) => {
     const { user } = req;
     user.movies.addToSet(req.body);
     user.save();
