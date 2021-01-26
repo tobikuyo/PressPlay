@@ -2,12 +2,23 @@
     text-align: center;
     margin-top: 10rem;
 
+    &__logout {
+        position: absolute;
+        right: 3rem;
+        top: 5rem;
+    }
+
     &__container {
         margin-top: 3rem;
         padding: 1rem;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+    }
+
+    &__text {
+        color: #fff;
+        margin-top: 30vh;
     }
 
     &__link {
@@ -18,5 +29,9 @@
         @extend .movielist__poster;
         height: 30rem;
         margin-bottom: 2rem;
+    }
+
+    .MuiSvgIcon-root {
+        font-size: 3.5rem;
     }
 }
