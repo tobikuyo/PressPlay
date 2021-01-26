@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { IMAGE_URL } from "../constants/url";
@@ -6,35 +6,33 @@ import { addMovie, getMovieIds, removeMovie } from "../redux/actions/profileActi
 import Navbar from "./Navbar";
 
 const DetailHeader = () => {
-    const [added, setAdded] = useState(false);
-
     const { movie } = useSelector(state => state.detailReducer);
     const { cast } = useSelector(state => state.castReducer);
     const { ids } = useSelector(state => state.profileReducer);
 
     const dispatch = useDispatch();
 
+    const isSaved = ids.includes(movie.id);
+
     const newMovie = {
-        ...movie,
         _id: movie.id,
+        title: movie.title,
+        overview: movie.overview,
         backdrop: movie.backdrop_path,
         poster: movie.poster_path,
         cast
     };
 
     const handleClick = () => {
-        if (!added) {
+        if (!isSaved) {
             dispatch(addMovie(newMovie));
         } else {
             dispatch(removeMovie(newMovie));
         }
-
-        setAdded(!added);
     };
 
     useEffect(() => {
         dispatch(getMovieIds());
-        ids.includes(movie.id) ? setAdded(true) : setAdded(false);
     }, [dispatch, ids, movie.id]);
 
     return (
@@ -48,7 +46,7 @@ const DetailHeader = () => {
                 >
                     <Navbar />
                     <button onClick={handleClick} className="spotlight__btn--header">
-                        {!added ? "ADD TO WATCHLIST" : "REMOVE MOVIE"}
+                        {!isSaved ? "ADD TO WATCHLIST" : "REMOVE MOVIE"}
                     </button>
                 </div>
             )}
