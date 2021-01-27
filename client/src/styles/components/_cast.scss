@@ -13,6 +13,10 @@
         display: flex;
         overflow-x: scroll;
         padding: 5rem;
+
+        &--center {
+            justify-content: center;
+        }
     }
 
     &__info {

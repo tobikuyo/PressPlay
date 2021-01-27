@@ -16,7 +16,11 @@ const Cast = () => {
 
     return (
         <div className="cast">
-            <div className="cast__container">
+            <div
+                className={`cast__container ${
+                    cast.length < 10 && "cast__container--center"
+                }`}
+            >
                 {cast.map(actor => (
                     <div className="cast__info" key={actor.cast_id}>
                         <Avatar
