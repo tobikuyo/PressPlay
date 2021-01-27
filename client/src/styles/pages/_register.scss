@@ -29,6 +29,10 @@
         @include form-element-constraints;
     }
 
+    &--error {
+        @extend .login__form--error;
+    }
+
     &--btn {
         @include form-btn;
         @include form-element($color-primary);

@@ -9,6 +9,8 @@ const initialForm = {
 
 const Login = () => {
     const [form, setForm] = useState(initialForm);
+    const [error, setError] = useState(null);
+
     const history = useHistory();
 
     const handleChanges = event => {
@@ -24,6 +26,7 @@ const Login = () => {
             setForm(initialForm);
             history.push("/");
         } catch (error) {
+            setError(error.response.data.message);
             console.log("LOGIN", error);
         }
     };
@@ -48,6 +51,7 @@ const Login = () => {
                     className="login__form--input"
                     placeholder="Password"
                 />
+                {error && <p className="login__form--error">{error}</p>}
                 <button className="login__form--btn" type="submit">
                     Sign In
                 </button>

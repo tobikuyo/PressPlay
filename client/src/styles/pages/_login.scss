@@ -35,6 +35,11 @@
         @include form-element-constraints;
     }
 
+    &--error {
+        font-size: 1.5rem;
+        color: $color-primary;
+    }
+
     &--btn {
         @include form-btn;
         @include form-element($color-primary);

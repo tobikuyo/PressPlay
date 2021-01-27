@@ -10,6 +10,8 @@ const initialForm = {
 
 const Register = () => {
     const [form, setForm] = useState(initialForm);
+    const [error, setError] = useState(null);
+
     const history = useHistory();
 
     const handleChanges = event => {
@@ -24,6 +26,7 @@ const Register = () => {
             setForm(initialForm);
             history.push("/login", [form]);
         } catch (error) {
+            setError(error.response.data.message);
             console.log("REGISTER", error);
         }
     };
@@ -56,6 +59,7 @@ const Register = () => {
                     className="register__form--input"
                     placeholder="Password"
                 />
+                {error && <p className="register__form--error">{error}</p>}
                 <button className="register__form--btn" type="submit">
                     Sign Up
                 </button>
