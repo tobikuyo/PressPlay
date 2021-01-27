@@ -64,8 +64,6 @@ Expected Response
 
 </details>
 
-<br>
-
 ### Movie Endpoints
 
 <details>
