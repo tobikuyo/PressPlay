@@ -18,7 +18,7 @@ const Cast = () => {
         <div className="cast">
             <div className="cast__container">
                 {cast.map(actor => (
-                    <div className="cast__info" key={actor.id}>
+                    <div className="cast__info" key={actor.cast_id}>
                         <Avatar
                             src={`${IMAGE_URL}${actor.profile_path}`}
                             alt={actor.name}
