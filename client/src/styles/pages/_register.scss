@@ -6,6 +6,12 @@
         font-size: 1.5rem;
         color: #737373;
     }
+
+    &__redirect span {
+        @media screen and (max-width: 428px) {
+            font-weight: 700;
+        }
+    }
 }
 
 .register__form {
