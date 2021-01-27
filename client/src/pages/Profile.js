@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import { getAllMovies } from "../redux/actions/profileActions";
-import { IMAGE_URL } from "../constants/url";
+import { POSTER_URL } from "../constants/url";
 
 const Profile = () => {
     const { movieList } = useSelector(state => state.profileReducer);
@@ -34,7 +34,7 @@ const Profile = () => {
                             key={movie._id}
                         >
                             <img
-                                src={`${IMAGE_URL}${movie.poster}`}
+                                src={`${POSTER_URL}${movie.poster}`}
                                 alt={movie.title}
                                 className="profile__movie"
                             />

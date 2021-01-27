@@ -1,4 +1,5 @@
 export const IMAGE_URL = "https://image.tmdb.org/t/p/original";
+export const POSTER_URL = "https://image.tmdb.org/t/p/w500";
 
 export const TRENDING_URL = "/trending/movie/day";
 export const POPULAR_URL = "/movie/popular";

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { IMAGE_URL } from "../constants/url";
+import { POSTER_URL } from "../constants/url";
 import {
     fetchNowPlaying,
     fetchPopular,
@@ -38,7 +38,7 @@ const MovieList = ({ type }) => {
             >
                 <img
                     className="movielist__poster"
-                    src={`${IMAGE_URL}${movie.poster_path}`}
+                    src={`${POSTER_URL}${movie.poster_path}`}
                     alt={movie.title}
                 />
             </Link>
