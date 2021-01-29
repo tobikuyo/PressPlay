@@ -13,7 +13,7 @@ export const addMovie = movie => async dispatch => {
                 authorization: localStorage.getItem("token")
             }
         });
-        dispatch({ type: ADD_MOVIE, payload: data });
+        dispatch({ type: ADD_MOVIE, payload: data.movie });
     } catch (error) {
         console.log("ADD MOVIE", error);
     }
@@ -21,12 +21,12 @@ export const addMovie = movie => async dispatch => {
 
 export const removeMovie = movie => async dispatch => {
     try {
-        const { data } = await axiosInstance.delete(`/${movie._id}`, {
+        await axiosInstance.delete(`/${movie._id}`, {
             headers: {
                 authorization: localStorage.getItem("token")
             }
         });
-        dispatch({ type: REMOVE_MOVIE, payload: data });
+        dispatch({ type: REMOVE_MOVIE, payload: movie.id });
     } catch (error) {
         console.log("REMOVE MOVIE", error);
     }
