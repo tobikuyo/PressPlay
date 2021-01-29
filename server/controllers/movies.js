@@ -26,7 +26,7 @@ exports.addMovie = (req, res) => {
     const { user } = req;
     user.movies.addToSet(req.body);
     user.save();
-    res.status(201).json({ movie: user.movies[user.movies.length - 1] });
+    res.status(200).json({ movie: user.movies[user.movies.length - 1] });
 };
 
 exports.removeMovie = (req, res) => {
