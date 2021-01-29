@@ -6,13 +6,17 @@ Installation:
 
 `npm install`
 
+Run Test Suite:
+
+`npm test`
+
 Start Server:
 
 `npm start` or `npm run server` (to use nodemon)
 
 To Visit App:
 
-`localhost:8000/api`
+`localhost:8000` or `https://press-play-movies.herokuapp.com`
 
 <br>
 
