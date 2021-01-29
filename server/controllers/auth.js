@@ -5,7 +5,7 @@ const User = require("../models/user");
 exports.createUser = async (req, res, next) => {
     try {
         const { name, email, password } = req.body;
-        const hash = await bcrypt.hash(password, 14);
+        const hash = await bcrypt.hash(password, 12);
         const user = await User.create({ name, email, password: hash });
 
         res.status(201).json({ user_id: user._id });
