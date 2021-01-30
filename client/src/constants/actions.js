@@ -10,3 +10,5 @@ export const ADD_MOVIE = "ADD_MOVIE";
 export const REMOVE_MOVIE = "REMOVE_MOVIE";
 export const GET_ALL_MOVIES = "GET_ALL_MOVIES";
 export const GET_ALL_IDS = "GET_ALL_IDS";
+
+export const SEARCH_MOVIE = "SEARCH_MOVIE";
