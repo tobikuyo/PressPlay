@@ -7,28 +7,15 @@
         width: 15rem;
     }
 
-    &__input {
-        @include form-element;
-        height: 40px;
-        width: 40%;
-        max-width: 350px;
-        padding: 1rem;
-        margin-left: -5%;
-        font-size: 1.45rem;
-        transition: all 0.3s ease-in-out;
-        display: none;
-
-        &:focus {
-            width: 50%;
-            max-width: 375px;
-        }
-
-        @media screen and(max-width: 1300px) {
-            margin-left: 0;
-        }
+    &__container {
+        display: flex;
     }
 
-    .MuiAvatar-root {
-        cursor: pointer;
+    .MuiSvgIcon-root {
+        color: $color-white;
+        margin-right: 1.5rem;
+        justify-self: center;
+        height: 40px;
+        width: 40px;
     }
 }
