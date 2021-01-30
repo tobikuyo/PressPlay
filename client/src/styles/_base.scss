@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Play", sans-serif;
+
+    &:focus {
+        outline: 0;
+    }
 }
 
 html {
