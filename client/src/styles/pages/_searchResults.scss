@@ -1,0 +1,15 @@
+.results {
+    @extend .profile;
+
+    &__container {
+        @extend .profile__container;
+    }
+
+    &__link {
+        @extend .profile__link;
+    }
+
+    &__movie {
+        @extend .profile__movie;
+    }
+}

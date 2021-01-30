@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Register from "./pages/Register";
 import Search from "./pages/Search";
+import SearchResults from "./pages/SearchResults";
 
 import "./styles/main.scss";
 
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/login" component={Login} />
             <PrivateRoute path="/movie/:id" component={Detail} />
             <PrivateRoute path="/profile" component={Profile} />
+            <PrivateRoute path="/search/results" component={SearchResults} />
             <PrivateRoute exact path="/search" component={Search} />
             <PrivateRoute exact path="/" component={Home} />
         </Switch>
