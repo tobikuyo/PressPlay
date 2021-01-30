@@ -14,7 +14,6 @@ A full stack app that uses the Movie Database API to fetch movies, based on what
 
 ### Future Improvements
 
--   Implement search functionality
 -   Implement infinite scroll
 
 ### Demo
