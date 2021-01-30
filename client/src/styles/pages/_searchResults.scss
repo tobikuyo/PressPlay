@@ -1,6 +1,10 @@
 .results {
     @extend .profile;
 
+    &__text {
+        @extend .profile__text;
+    }
+
     &__container {
         @extend .profile__container;
     }
