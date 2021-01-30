@@ -11,7 +11,7 @@ const SearchResults = () => {
 
     useEffect(() => {
         dispatch(searchMovie(query));
-    }, [dispatch]);
+    }, [dispatch, query]);
 
     return (
         <div className="results">
