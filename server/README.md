@@ -23,8 +23,11 @@ To Visit App:
 ### Auth Endpoints
 
 <details>
-<summary>POST: /auth/register - register a new user</summary>
+<summary>Register a new user</summary>
 <br>
+
+`POST /api/auth/register`
+
 Expected Body
 
 ```JSON
@@ -46,8 +49,11 @@ Expected Response
 
 </details>
 <details>
-<summary>POST: /auth/login - log in a user</summary>
+<summary>Log in a user</summary>
 <br>
+
+`POST /api/auth/login`
+
 Expected Body
 
 ```JSON
@@ -71,7 +77,10 @@ Expected Response
 ### Movie Endpoints
 
 <details>
-<summary>GET: /auth/movie - get all saved movies</summary>
+<summary>Get all saved movies</summary>
+<br>
+
+`GET /api/auth/movie`
 
 Expected Response
 
@@ -96,8 +105,11 @@ Expected Response
 
 </details>
 <details>
-<summary>POST: /auth/movie - add a movie</summary>
+<summary>Add a movie</summary>
 <br>
+
+`POST /api/auth/movie`
+
 Expected Body
 
 ```JSON
@@ -137,11 +149,12 @@ Expected Response
 
 </details>
 <details>
-<summary>DELETE: /auth/movie/:id - remove a movie</summary>
+<summary>Remove a movie</summary>
+<br>
+
+`DELETE /api/auth/movie/:id`
 
 </details>
-
-<br>
 
 ### Database
 
