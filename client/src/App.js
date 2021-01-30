@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Register from "./pages/Register";
+import Search from "./pages/Search";
 
 import "./styles/main.scss";
 
@@ -17,6 +18,7 @@ const App = () => {
             <Route path="/login" component={Login} />
             <PrivateRoute path="/movie/:id" component={Detail} />
             <PrivateRoute path="/profile" component={Profile} />
+            <PrivateRoute exact path="/search" component={Search} />
             <PrivateRoute exact path="/" component={Home} />
         </Switch>
     );
