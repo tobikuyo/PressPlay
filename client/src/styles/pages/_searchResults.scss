@@ -11,9 +11,10 @@
 
     &__link {
         @extend .profile__link;
+        margin-bottom: 2rem;
     }
 
     &__movie {
-        @extend .profile__movie;
+        @extend .movielist__poster;
     }
 }

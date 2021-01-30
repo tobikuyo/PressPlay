@@ -17,7 +17,7 @@ const Search = () => {
         event.preventDefault();
         dispatch(searchMovie(query));
         setQuery("");
-        push("/search/results");
+        push(`/search/${query}`);
     };
 
     return (
