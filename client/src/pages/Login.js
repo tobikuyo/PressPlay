@@ -9,6 +9,7 @@ const initialForm = {
 
 const Login = () => {
     const [form, setForm] = useState(initialForm);
+    const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
 
     const history = useHistory();
@@ -21,6 +22,7 @@ const Login = () => {
         event.preventDefault();
 
         try {
+            setIsLoading(true);
             const { data } = await axiosInstance.post("/login", form);
             localStorage.setItem("token", data.token);
             setForm(initialForm);
@@ -28,6 +30,8 @@ const Login = () => {
         } catch (error) {
             setError(error.response.data.message);
             console.log("LOGIN", error);
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -53,7 +57,7 @@ const Login = () => {
                 />
                 {error && <p className="login__form--error">{error}</p>}
                 <button className="login__form--btn" type="submit">
-                    Sign In
+                    {isLoading ? "Please wait..." : "Sign In"}
                 </button>
                 <p className="login__redirect">
                     New to PressPlay?{" "}
