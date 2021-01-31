@@ -4,11 +4,14 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import App from "./App";
 import store from "./redux/store";
+import ScrollToTop from "./components/ScrollToTop";
 
 ReactDOM.render(
     <Provider store={store}>
         <Router>
-            <App />
+            <ScrollToTop>
+                <App />
+            </ScrollToTop>
         </Router>
     </Provider>,
     document.getElementById("root")
